@@ -1,0 +1,13 @@
+- name: Create Linode Instance
+  hosts: localhost
+  
+  tasks:
+    - name: Create a Linode instance
+      linode.cloud.instance:
+        api_token: "639a24902e855fa766572b9cf4b052fca7dcef7f6132d88f2a31571a94b11eb9"
+        label: my-ansible-linode
+        type: g6-nanode-1
+        region: us-east
+        image: linode/ubuntu22.04
+        root_pass: "!@#$%^&*()1234567890QWERTYUIOPasdfghjkl"
+        state: present
